@@ -34,7 +34,6 @@ function textAreaInput() {
 
 // funcion en loop para transformar strings
 function encryptTextLoop(text, object, keys) {
-
     let newText = '';
 
     for (let i = 0; i < text.length; i++) {
@@ -42,15 +41,14 @@ function encryptTextLoop(text, object, keys) {
         if (keys.includes(text[i])) {
             // for anidado para explorar las llaves
             for (let j = 0; j < keys.length; j++) {
-
+                
                 if (text[i] == keys[j]) {
-
                     const letter = keys[j];
-                    newText = newText + object[letter];
+                    newText += object[letter];
                 }
             }
         } else {
-            newText = newText + text[i];
+            newText += text[i];
         }
     }
 
@@ -60,7 +58,7 @@ function encryptTextLoop(text, object, keys) {
 function desencryptTextLoop(text, obj, keys) {
     let desencriptedText = '';
 
-    for (let i=0; i < text.length; i++) {
+    for (let i = 0; i < text.length; i++) {
         // en caso de que se encuentre una vocal salta el numero de letras que tenga la llave 
         if (keys.includes(text[i])) {
             const letter = text[i];
@@ -103,5 +101,5 @@ function desencryptButton() {
         alert(textDesencripted);
     } else {
         alert('No podemos encriptar un mensaje vacio ;)')
-    }    
+    }
 }
