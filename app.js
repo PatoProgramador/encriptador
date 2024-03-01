@@ -26,15 +26,6 @@ const encripKeys = {
     'u': 'ufat'
 }
 
-// llaves para desencriptar
-const desencripKeys = {
-    'enter': 'e',
-    'imes': 'i',
-    'ai': 'a',
-    'o': 'ober',
-    'ufat': 'u'
-}
-
 // funcion para obtener el texto del textarea
 function textAreaInput() {
     let text = document.getElementById('textinput').value;
@@ -42,7 +33,7 @@ function textAreaInput() {
 }
 
 // funcion en loop para transformar strings
-function textTransformLoop(text, object, keys) {
+function encryptTextLoop(text, object, keys) {
 
     let newText = '';
 
@@ -66,13 +57,30 @@ function textTransformLoop(text, object, keys) {
     return newText;
 }
 
+function desencryptTextLoop(text, obj, keys) {
+    let desencriptedText = '';
+
+    for (let i=0; i < text.length; i++) {
+        // en caso de que se encuentre una vocal salta el numero de letras que tenga la llave 
+        if (keys.includes(text[i])) {
+            const letter = text[i];
+            desencriptedText += letter;
+            i += obj[letter].length - 1;
+        } else {
+            desencriptedText += text[i]
+        }
+    }
+
+    return desencriptedText;
+}
+
 
 function encryptButton() {
     const textarea = textAreaInput().toLowerCase();
-
+    // Array de vocales para comparaciones
     const keys = Object.keys(encripKeys);
 
-    const textEncripted = textTransformLoop(textarea, encripKeys, keys);
+    const textEncripted = encryptTextLoop(textarea, encripKeys, keys);
 
     // modal en caso de que se use el botón sin texto
     if (textarea.length > 0) {
@@ -84,5 +92,16 @@ function encryptButton() {
 
 // funcion para desencriptar texto
 function desencryptButton() {
+    const textarea = textAreaInput().toLowerCase();
 
+    const keys = Object.keys(encripKeys);
+
+    const textDesencripted = desencryptTextLoop(textarea, encripKeys, keys);
+
+    // modal en caso de que se use el botón sin texto
+    if (textarea.length > 0) {
+        alert(textDesencripted);
+    } else {
+        alert('No podemos encriptar un mensaje vacio ;)')
+    }    
 }
