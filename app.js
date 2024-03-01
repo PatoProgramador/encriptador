@@ -32,7 +32,7 @@ function textAreaInput() {
     return text;
 }
 
-// funcion en loop para transformar strings
+// funcion en loop para encriptar strings
 function encryptTextLoop(text, object, keys) {
     let newText = '';
 
@@ -41,7 +41,7 @@ function encryptTextLoop(text, object, keys) {
         if (keys.includes(text[i])) {
             // for anidado para explorar las llaves
             for (let j = 0; j < keys.length; j++) {
-                
+
                 if (text[i] == keys[j]) {
                     const letter = keys[j];
                     newText += object[letter];
@@ -54,7 +54,7 @@ function encryptTextLoop(text, object, keys) {
 
     return newText;
 }
-
+// funcion en loop para desencriptar strings
 function desencryptTextLoop(text, obj, keys) {
     let desencriptedText = '';
 
@@ -72,7 +72,7 @@ function desencryptTextLoop(text, obj, keys) {
     return desencriptedText;
 }
 
-
+// Funciones onClick de los botones
 function encryptButton() {
     const textarea = textAreaInput().toLowerCase();
     // Array de vocales para comparaciones
@@ -88,7 +88,7 @@ function encryptButton() {
     }
 }
 
-// funcion para desencriptar texto
+
 function desencryptButton() {
     const textarea = textAreaInput().toLowerCase();
 
