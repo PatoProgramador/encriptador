@@ -6,20 +6,24 @@
     <title>Encriptador Phatos</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="./src/Vector.png" alt="alura-logo">
+        <img class="banner-logo" src="./src/Vector.png" alt="alura-logo">
     </header>
     <main>
-        <section>
-            <textarea onchange="manageButton()" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
+        <section class="encript-section">
+            <textarea class="text-area-input" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
             <button onClick="encryptButton()" id="encrButton">Encriptar</button>
             <button onClick="desencryptButton()">Desencriptar</button>
         </section>
-        <section>
-            <p>Nigún mensaje fue encontrado</p>
-            <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        <section class="desencript-section">
+            <img class="modal-cheems-image" src="./src/modal/Cheems-PNG (1).png" alt="no-message-img">
+            <p class="modal-non-message-principal">Ningún mensaje fue encontrado</p>
+            <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
         </section>
     </main>
 </body>
