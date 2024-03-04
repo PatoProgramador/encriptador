@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <textarea onchange="manageButton()" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
-        <button onClick="encryptButton()" id="encrButton">Encriptar</button>
-        <button onClick="desencryptButton()">Desencriptar</button>
-    </section>
-    <section>
-        <p>Nigún mensaje fue encontrado</p>
-        <p>Ingresa el texto que desees encriptar o desencriptar</p>
-    </section>
+    <header>
+        <img src="./src/Vector.png" alt="alura-logo">
+    </header>
+    <main>
+        <section>
+            <textarea onchange="manageButton()" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
+            <button onClick="encryptButton()" id="encrButton">Encriptar</button>
+            <button onClick="desencryptButton()">Desencriptar</button>
+        </section>
+        <section>
+            <p>Nigún mensaje fue encontrado</p>
+            <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </section>
+    </main>
 </body>
 <script src="app.js"></script>
 </html>
