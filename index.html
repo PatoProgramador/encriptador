@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -10,13 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img class="banner-logo" src="./src/Vector.png" alt="alura-logo">
     </header>
     <main>
         <section class="encript-section">
-            <textarea class="text-area-input" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
+            <textarea class="text-area-input" name="lefttext" id="textinput" cols="30" rows="13"
+                placeholder="Ingresa el texto aquí"></textarea>
             <p class="warning-text">⚠ Solo letras minúsculas y sin acentos</p>
             <div class="buttonsSection">
                 <button onClick="encryptButton()" id="encrButton" class="encryptButton">Encriptar</button>
@@ -24,11 +27,36 @@
             </div>
         </section>
         <section class="desencript-section">
-            <img class="modal-cheems-image" src="./src/modal/Cheems-PNG (1).png" alt="no-message-img">
-            <p class="modal-non-message-principal">Ningún mensaje fue encontrado</p>
-            <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
+            <!-- Caso inicial --- No hay mensaje -->
+            <div class="righside-box-size non-message-modal-section">
+                <img class="modal-cheems-image" src="./src/modal/Cheems-PNG (1).png" alt="no-message-img">
+                <p class="modal-non-message-principal">Ningún mensaje fue encontrado</p>
+                <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <!-- Mensaje encriptado -->
+            <div class="hide" class="righside-box-size encripted-message-section">
+                <p class="encripted-message-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit
+                    et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque
+                    ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+                <div class="copyBox">
+                    <button class="desencryptButton">Copiar</button>
+                </div>
+            </div>
+            <!-- Manejo de errores -->
+            <div class="hide" class="righside-box-size  non-message-modal-section" >
+                <img class="modal-cheems-image" src="src/modal/e64d2f640b07a61f3dbbc1431abe3190.png" alt="error-image">
+                <p class="modal-non-message-principal">No se puede encriptar un mensaje vacío</p>
+                <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <!-- Easter egg jejejeje -->
+            <div class="hide" class="righside-box-size  non-message-modal-section" >
+                <img class="modal-cheems-image" src="src/modal/80427.png" alt="error-image">
+                <p class="modal-non-message-principal easter-egg">Mine Lebenslangerschicksalsschatz</p>
+                <p class="modal-non-message-secundary">Siempre seras mi tesoro más grande, mi luz ante la oscuridad, mi salvación de todo</p>
+            </div>
         </section>
     </main>
 </body>
 <script src="app.js"></script>
+
 </html>

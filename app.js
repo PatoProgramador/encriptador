@@ -1,5 +1,9 @@
 const buttonEncript = document.getElementById('encrButton')
 
+let nonMessageModalSection = document.querySelector('.encripted-message-modal-section')
+
+nonMessageModalSection.setAttribute('style', 'display: block');
+
 // Las "llaves" de encriptación que utilizaremos son las siguientes:
 
 // La letra "e" es convertida para "enter"
