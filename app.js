@@ -2,6 +2,9 @@
 let encriptedMessage = document.querySelector('.encripted-message-text-area');
 let nonMessageDiv = document.getElementById('non-message-div');
 let encriptedDiv = document.getElementById('encripted-message-div');
+let easterEggDiv = document.getElementById('easter-egg-div');
+let errorDiv = document.getElementById('error-div');
+let errorMessage = document.getElementById('error-message');
 // Las "llaves" de encriptación que utilizaremos son las siguientes:
 
 // La letra "e" es convertida para "enter"
@@ -33,10 +36,12 @@ function textAreaInput() {
     let text = document.getElementById('textinput').value;
     return text;
 }
-
-function showEncriptedMessage() {
-    nonMessageDiv.classList.add('hide');
-    encriptedDiv.classList.remove('hide');
+// se remueve el hide del ultimo siempre
+function setEncriptedSection(div1, div2, div3, div4) {
+    div1.classList.add('hide');
+    div2.classList.add('hide');
+    div3.classList.add('hide');
+    div4.classList.remove('hide');
 }
 
 // funcion en loop para encriptar strings
@@ -85,14 +90,18 @@ function encryptButton() {
     // Array de vocales para comparaciones
     const keys = Object.keys(encripKeys);
 
-    encriptedMessage.value = encryptTextLoop(textarea, encripKeys, keys);
-    showEncriptedMessage();
-
-    // modal en caso de que se use el botón sin texto
-    if (textarea.length > 0) {
-        alert(textEncripted);
+    // Modales
+    if (textarea == '18 de diciembre de 2021') {
+        setEncriptedSection(nonMessageDiv, errorDiv, encriptedDiv, easterEggDiv);
     } else {
-        alert('No podemos encriptar un mensaje vacio ;)')
+        // modal en caso de que se use el botón sin texto
+        if (textarea.length > 0) {
+            encriptedMessage.value = encryptTextLoop(textarea, encripKeys, keys);
+            setEncriptedSection(nonMessageDiv, easterEggDiv, errorDiv, encriptedDiv);
+        } else {
+            errorMessage.innerHTML = 'No se puede encriptar un mensaje vacío';
+            setEncriptedSection(nonMessageDiv, easterEggDiv, encriptedDiv, errorDiv);
+        }
     }
 }
 
@@ -102,13 +111,17 @@ function desencryptButton() {
 
     const keys = Object.keys(encripKeys);
 
-    encriptedMessage.value = desencryptTextLoop(textarea, encripKeys, keys);
-    showEncriptedMessage();
-
-    // modal en caso de que se use el botón sin texto
-    if (textarea.length > 0) {
-        alert(textDesencripted);
+    // Modales
+    if (textarea == '18 de diciembre de 2021') {
+        setEncriptedSection(nonMessageDiv, errorDiv, encriptedDiv, easterEggDiv);
     } else {
-        alert('No podemos encriptar un mensaje vacio ;)')
+        // modal en caso de que se use el botón sin texto
+        if (textarea.length > 0) {
+            encriptedMessage.value = desencryptTextLoop(textarea, encripKeys, keys);
+            setEncriptedSection(nonMessageDiv, easterEggDiv, errorDiv, encriptedDiv);
+        } else {
+            errorMessage.innerHTML = 'No se puede encriptar un mensaje vacío';
+            setEncriptedSection(nonMessageDiv, easterEggDiv, encriptedDiv, errorDiv);
+        }
     }
 }

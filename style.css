@@ -144,10 +144,10 @@ main {
 }
 
 /* Para ocultar los distintos modales */
-.hide {
-    display: none;
-}
-
 .easter-egg {
     color: #5c0736;
+}
+
+.hide {
+    display: none;
 }
