@@ -1,9 +1,7 @@
-const buttonEncript = document.getElementById('encrButton')
-
-let nonMessageModalSection = document.querySelector('.encripted-message-modal-section')
-
-nonMessageModalSection.setAttribute('style', 'display: block');
-
+// variables
+let encriptedMessage = document.querySelector('.encripted-message-text-area');
+let nonMessageDiv = document.getElementById('non-message-div');
+let encriptedDiv = document.getElementById('encripted-message-div');
 // Las "llaves" de encriptación que utilizaremos son las siguientes:
 
 // La letra "e" es convertida para "enter"
@@ -34,6 +32,11 @@ const encripKeys = {
 function textAreaInput() {
     let text = document.getElementById('textinput').value;
     return text;
+}
+
+function showEncriptedMessage() {
+    nonMessageDiv.classList.add('hide');
+    encriptedDiv.classList.remove('hide');
 }
 
 // funcion en loop para encriptar strings
@@ -82,7 +85,8 @@ function encryptButton() {
     // Array de vocales para comparaciones
     const keys = Object.keys(encripKeys);
 
-    const textEncripted = encryptTextLoop(textarea, encripKeys, keys);
+    encriptedMessage.value = encryptTextLoop(textarea, encripKeys, keys);
+    showEncriptedMessage();
 
     // modal en caso de que se use el botón sin texto
     if (textarea.length > 0) {
@@ -98,7 +102,8 @@ function desencryptButton() {
 
     const keys = Object.keys(encripKeys);
 
-    const textDesencripted = desencryptTextLoop(textarea, encripKeys, keys);
+    encriptedMessage.value = desencryptTextLoop(textarea, encripKeys, keys);
+    showEncriptedMessage();
 
     // modal en caso de que se use el botón sin texto
     if (textarea.length > 0) {

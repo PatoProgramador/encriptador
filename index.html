@@ -28,28 +28,26 @@
         </section>
         <section class="desencript-section">
             <!-- Caso inicial --- No hay mensaje -->
-            <div class="righside-box-size non-message-modal-section">
+            <div id="non-message-div" class="righside-box-size non-message-modal-section">
                 <img class="modal-cheems-image" src="./src/modal/Cheems-PNG (1).png" alt="no-message-img">
                 <p class="modal-non-message-principal">Ningún mensaje fue encontrado</p>
                 <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
             <!-- Mensaje encriptado -->
-            <div class="hide" class="righside-box-size encripted-message-section">
-                <p class="encripted-message-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit
-                    et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque
-                    ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
-                <div class="copyBox">
+            <div class="hide" id="encripted-message-div" class="righside-box-size encripted-message-section">
+                <textarea disabled class="encripted-message-text-area" id="" cols="30" rows="10"></textarea>
+                <div class="copy-button-box">
                     <button class="desencryptButton">Copiar</button>
                 </div>
             </div>
             <!-- Manejo de errores -->
-            <div class="hide" class="righside-box-size  non-message-modal-section" >
+            <div class="hide" id="error-div" class="righside-box-size  non-message-modal-section" >
                 <img class="modal-cheems-image" src="src/modal/e64d2f640b07a61f3dbbc1431abe3190.png" alt="error-image">
                 <p class="modal-non-message-principal">No se puede encriptar un mensaje vacío</p>
                 <p class="modal-non-message-secundary">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
             <!-- Easter egg jejejeje -->
-            <div class="hide" class="righside-box-size  non-message-modal-section" >
+            <div class="hide" id="easter-egg-div" class="righside-box-size  non-message-modal-section" >
                 <img class="modal-cheems-image" src="src/modal/80427.png" alt="error-image">
                 <p class="modal-non-message-principal easter-egg">Mine Lebenslangerschicksalsschatz</p>
                 <p class="modal-non-message-secundary">Siempre seras mi tesoro más grande, mi luz ante la oscuridad, mi salvación de todo</p>

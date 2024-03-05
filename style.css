@@ -57,6 +57,7 @@ main {
     color: white;
     background-color: #200a71;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .desencryptButton {
@@ -68,6 +69,7 @@ main {
     border-color: #200a71;
     background-color: #D8DFE8;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .desencript-section {
@@ -78,8 +80,7 @@ main {
     color: #200a71;
     width: 400px;
     border-radius: 32px;
-    padding: 30px;
-    margin: 0 0 0 20px;
+    padding: 40px;
     box-shadow: 10px 10px 30px #00000014;
 }
 
@@ -117,22 +118,31 @@ main {
 .encripted-message-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.encripted-message-p {
-    height: 570px;
+.copy-button-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.encripted-message-text-area {
+    border: none;
+    resize: none;
+    outline: none;
+    height: 555px;
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
     word-wrap: break-word; 
     align-self: flex-start;
+    background-color: white;
 }
 
-.copyBox {
-    align-self: flex-end;
-    align-items: center;
-    justify-content: center;
-}
 /* Para ocultar los distintos modales */
 .hide {
     display: none;
