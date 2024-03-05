@@ -17,8 +17,11 @@
     <main>
         <section class="encript-section">
             <textarea class="text-area-input" name="lefttext" id="textinput" cols="30" rows="13" placeholder="Ingresa el texto aquí"></textarea>
-            <button onClick="encryptButton()" id="encrButton">Encriptar</button>
-            <button onClick="desencryptButton()">Desencriptar</button>
+            <p class="warning-text">⚠ Solo letras minúsculas y sin acentos</p>
+            <div class="buttonsSection">
+                <button onClick="encryptButton()" id="encrButton" class="encryptButton">Encriptar</button>
+                <button onClick="desencryptButton()" class="desencryptButton">Desencriptar</button>
+            </div>
         </section>
         <section class="desencript-section">
             <img class="modal-cheems-image" src="./src/modal/Cheems-PNG (1).png" alt="no-message-img">
