@@ -5,6 +5,7 @@ let encriptedDiv = document.getElementById('encripted-message-div');
 let easterEggDiv = document.getElementById('easter-egg-div');
 let errorDiv = document.getElementById('error-div');
 let errorMessage = document.getElementById('error-message');
+let copyButton = document.getElementById('copyButton');
 // Las "llaves" de encriptación que utilizaremos son las siguientes:
 
 // La letra "e" es convertida para "enter"
@@ -124,4 +125,10 @@ function desencryptButton() {
             setEncriptedSection(nonMessageDiv, easterEggDiv, encriptedDiv, errorDiv);
         }
     }
+}
+
+// funcion para copiar texto
+function copyText() {
+    navigator.clipboard.writeText(encriptedMessage.value);
+    copyButton.innerHTML = '¡Texto copiado!'
 }
