@@ -3,7 +3,6 @@ body, header, main {
 }
 
 body {
-    padding: 20px 40px;
     font-family: Inter;
 }
 
@@ -13,6 +12,8 @@ header {
 main {
     display: flex;
     justify-content: right;
+    padding: 20px 40px;
+    margin-bottom: 10px;
 }
 
 .encript-section {
@@ -150,4 +151,16 @@ main {
 
 .hide {
     display: none;
+}
+
+footer {
+    background: linear-gradient(#200a71, #800399);
+    width: 100%;
+    height: 49px;
+    color: white;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    align-items: center;
 }
