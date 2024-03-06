@@ -91,6 +91,8 @@ function encryptButton() {
     // Array de vocales para comparaciones
     const keys = Object.keys(encripKeys);
 
+    copyButton.innerHTML = 'Copiar';
+
     // Modales
     if (textarea == '18 de diciembre de 2021') {
         setEncriptedSection(nonMessageDiv, errorDiv, encriptedDiv, easterEggDiv);
@@ -112,6 +114,8 @@ function desencryptButton() {
 
     const keys = Object.keys(encripKeys);
 
+    copyButton.innerHTML = 'Copiar';
+
     // Modales
     if (textarea == '18 de diciembre de 2021') {
         setEncriptedSection(nonMessageDiv, errorDiv, encriptedDiv, easterEggDiv);
@@ -130,5 +134,5 @@ function desencryptButton() {
 // funcion para copiar texto
 function copyText() {
     navigator.clipboard.writeText(encriptedMessage.value);
-    copyButton.innerHTML = '¡Texto copiado!'
+    copyButton.innerHTML = '¡Texto en el portapapeles!';
 }
