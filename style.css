@@ -4,12 +4,18 @@ body, header, main {
 
 body {
     font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
     padding: 20px;
+    height: 5%;
 }
 main {
+    flex: 1;
+    height: 75%;
     display: flex;
     justify-content: right;
     padding: 20px 40px;
@@ -28,6 +34,7 @@ main {
 
 .encript-section textarea {
     width: 1150px;
+    height: 80%;
     border: none;
     resize: none;
     outline: none;
@@ -154,9 +161,10 @@ main {
 }
 
 footer {
+    flex-shrink: 0;
     background: linear-gradient(#200a71, #800399);
     width: 100%;
-    height: 49px;
+    height: 5%;
     color: white;
     margin: 0 auto;
     display: grid;
