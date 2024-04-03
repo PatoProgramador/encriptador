@@ -1,7 +1,7 @@
 <h1>Encriptador ONE (Oracle Next Education)</h1>
 
 
-[**Da click aquí para ir al deploy del encriptador :)**](https://patoprogramador.github.io/encriptador/)
+[**Da click aquí para ir al deploy del encriptador :) (te recomiendo dar click derecho y abrir en pestaña nueva jeje)**](https://patoprogramador.github.io/encriptador/)
 
 ---
 Encriptador y desencriptador de texto, donde se pueden generar mensajes personalizados de tu agrado según las llaves de encriptación que utilizamos aquí :D.
