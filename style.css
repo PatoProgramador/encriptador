@@ -9,6 +9,11 @@ body {
     height: 100vh;
 }
 
+body textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 header {
     padding: 20px;
     height: 5%;
