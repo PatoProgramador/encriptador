@@ -125,7 +125,7 @@ function desencryptButton() {
             encriptedMessage.value = desencryptTextLoop(textarea, encripKeys, keys);
             setEncriptedSection(nonMessageDiv, easterEggDiv, errorDiv, encriptedDiv);
         } else {
-            errorMessage.innerHTML = 'No se puede encriptar un mensaje vacío';
+            errorMessage.innerHTML = 'No se puede desencriptar un mensaje vacío';
             setEncriptedSection(nonMessageDiv, easterEggDiv, encriptedDiv, errorDiv);
         }
     }
