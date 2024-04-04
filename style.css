@@ -307,9 +307,10 @@ footer {
     footer {
         height: 80px;
         align-self: flex-end;
+        padding: 20px;
     }
 
     footer div {
-        width: 90%;
+        width: 70%;
     }
 }
