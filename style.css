@@ -161,7 +161,6 @@ main {
 }
 
 footer {
-    flex-shrink: 0;
     background: linear-gradient(#200a71, #800399);
     width: 100%;
     height: 5%;
@@ -171,4 +170,58 @@ footer {
     grid-template-columns: auto auto auto;
     text-align: center;
     align-items: center;
+}
+/* Media Queries */
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    body {
+        height: 100%;
+    }
+
+    main {
+        flex: 0;
+        flex-direction: column;
+    }
+
+    .encript-section {
+        width: 86%;
+        margin-bottom: 20px;
+    }
+
+    .encript-section textarea {
+        width: 95%;
+    }
+
+    .desencript-section {
+        width: 88%;
+        margin-bottom: 20px;
+    }
+
+    .desencript-section img {
+        display: none;
+    }
+
+    .encripted-message-text-area {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    footer {
+        height: 50px;
+        align-self: flex-end;
+    }
+
+    footer div {
+        width: 60%;
+    }
+}
+
+/* Tablets y phablets */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+
+}
+
+/* Teléfonos */
+@media only screen and (max-width: 575px){
+
 }
