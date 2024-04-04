@@ -194,7 +194,6 @@ footer {
 
     .desencript-section {
         width: 88%;
-        margin-bottom: 20px;
     }
 
     .desencript-section img {
@@ -218,10 +217,98 @@ footer {
 
 /* Tablets y phablets */
 @media only screen and (min-width: 576px) and (max-width: 767px){
+    body {
+        height: 100%;
+    }
 
+    main {
+        flex: 0;
+        flex-direction: column;
+    }
+
+    .encript-section {
+        width: 81%;
+        margin-bottom: 20px;
+    }
+
+    .encript-section textarea {
+        width: 95%;
+    }
+
+    .desencript-section {
+        width: 85%;
+    }
+
+    .desencript-section img {
+        display: none;
+    }
+
+    .encripted-message-text-area {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    footer {
+        height: 70px;
+        align-self: flex-end;
+    }
+
+    footer div {
+        width: 80%;
+    }
 }
 
 /* Teléfonos */
 @media only screen and (max-width: 575px){
+    body {
+        height: 100%;
+    }
 
+    main {
+        flex: 0;
+        flex-direction: column;
+    }
+
+    .encript-section {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .encript-section textarea {
+        width: 95%;
+        height: 150px;
+    }
+
+    .buttonsSection {
+        flex-direction: column;
+    }
+
+    .encryptButton {
+        margin-bottom: 20px;
+    }
+
+    .desencript-section {
+        justify-content: center;
+        align-items: center;
+        width: 83%;
+    }
+
+    .desencript-section img {
+        display: none;
+    }
+
+    .encripted-message-text-area {
+        width: 70%;
+        height: 150px;
+    }
+
+    footer {
+        height: 80px;
+        align-self: flex-end;
+    }
+
+    footer div {
+        width: 90%;
+    }
 }
